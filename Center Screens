@@ -1,0 +1,13 @@
+public Program() {
+  Runtime.UpdateFrequency=UpdateFrequency.Update100;
+}
+void Main() {
+  List<IMyTerminalBlock> TextPanelBlocks=new List<IMyTerminalBlock>();
+  GridTerminalSystem.GetBlocksOfType<IMyTextPanel>(TextPanelBlocks);
+  for (int i=0; i < TextPanelBlocks.Count; i++) {
+    if(((IMyTextSurface)TextPanelBlocks[i]).TextPadding!=0.0f) {
+      ((IMyTextSurface)TextPanelBlocks[i]).TextPadding=0.0f;
+      Echo("Changed "+(TextPanelBlocks[i].CustomName+" Padding: "+((IMyTextSurface)TextPanelBlocks[i]).TextPadding));
+    }
+  }
+}
