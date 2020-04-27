@@ -9,3 +9,10 @@ This script is for a remote mining depo.  It turns on and off drills, and makes 
 - Place down a foundataion of some sort to place blocks on.
 - Place down at least one large cargo container, at least one refinery, and work out some power
 - Make sure the refineries are connected to the cargo container
+
+--Center Screens--
+[As of 194.208]
+
+This script resets ALL LCDs on any connected grid to 0% padding.  Its set to run once every 100ms.
+
+It reports on any screen that has been changed.
