@@ -1,7 +1,7 @@
 # SpaceEngineers_Scripts
 My general depo of scripts for SE
 
---Mining Depo--
+--Drill Platform--
 [As of 1.192.104]
 
 This script is for a remote mining depo.  It turns on and off drills, and makes sure that any attached refinery has "stuff" to refine.  It will also clear out the inventory of all refineries and puts them back into cargo containers.
