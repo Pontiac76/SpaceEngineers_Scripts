@@ -15,7 +15,7 @@ This script is for a remote mining depo.  It turns on and off drills based on ca
 
 This script resets ALL STANDARD LCDs on any connected grid to 0% padding.  It does not handle blocks with multiple LCDs (Programmable block, ironically, is one type of block that is not handled by this script)
 
-**Taledens Inventory Manager [TIM] **
+**Taledens Inventory Manager [TIM]**
 > As of 1.194.208
 
 This is NOT my script, but, a copy and update of https://github.com/luvies/TaledensInvManagerUpdated
