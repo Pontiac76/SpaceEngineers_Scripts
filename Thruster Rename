@@ -1,0 +1,56 @@
+// A VERY basic and direct script that takes no arguments that will rename and hide
+//   all thrusters on all connected grids.
+//
+// -- Add a Programmers Block to the grid
+// -- Copy the following code to the Programmers Block
+// -- Edit the variables below to suit your preferences
+// -- Push CHECK CODE button
+// -- Click OK
+// -- RUN the program
+// 
+// NOTE: The direction of the thruster is not added by this script.  SE does this automatically
+//       when scripts change the name of the block
+
+string Prefix="BFT";
+string Divider="-";
+string Atmos="Atmos Thrust";
+string Hydro="Hydro Thrust";
+string Ion="Ion Thrust";
+string LSize="L. ";
+string SSize="S. ";
+bool ShowThrustersInTerminal=false;
+
+
+
+// ########
+// ########
+// ########Shouldn't have to touch the code below
+void Main() {
+  string ThrustName = "";
+  string ThrustDir = "";
+
+  List<IMyTerminalBlock> thrusters = new List<IMyTerminalBlock>();
+  GridTerminalSystem.GetBlocksOfType<IMyThrust>(thrusters);
+  
+  foreach (var thruster in thrusters) {
+    
+    ThrustName=thruster.DefinitionDisplayNameText.ToString();
+    ThrustDir=thruster.Orientation.Forward.ToString();
+    
+    string Size;
+    if (ThrustName.Contains("Large")) {
+      Size=LSize;
+    } else {
+      Size=SSize;
+    }
+    Size=" "+Size;
+    
+    if (ThrustName.Contains("Atmospheric Thruster")) ThrustName=Atmos;
+    if (ThrustName.Contains("Hydrogen Thruster")) ThrustName=Hydro;
+    if (ThrustName.Contains("Ion Thruster")) ThrustName=Ion;
+    
+    thruster.CustomName=(Prefix+Divider+Size+ThrustName);
+    thruster.ShowInTerminal=ShowThrustersInTerminal;
+    Echo(thruster.CustomName);
+  }
+}
