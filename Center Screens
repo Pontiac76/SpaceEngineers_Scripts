@@ -1,6 +1,15 @@
+// This small script will recenter all single screen LCDs so that any text on them are 0% offset.
+// I didn't like the 2% offset Keen decided to default after every load of any game, so, this is my "patch" for that problem.
+// 
+// This script affects all connected grids
+// This script does NOT handle cockpits and their multi-screen functionality AFAIK
+// This script is open and free to be used by whomever, wherever, however they want.
+// This script is posted on my github at https://github.com/Pontiac76/SpaceEngineers_Scripts/blob/master/Center%20Screens
+
 public Program() {
   Runtime.UpdateFrequency=UpdateFrequency.Update100;
 }
+
 void Main() {
   List<IMyTerminalBlock> TextPanelBlocks=new List<IMyTerminalBlock>();
   GridTerminalSystem.GetBlocksOfType<IMyTextPanel>(TextPanelBlocks);
