@@ -4,6 +4,8 @@ version 1.7.8 (2019-05-14) - Updated by TMafonoGames - https://pastebin.com/jieB
 version 1.7.9 (2019-10-19) - Updated by XanderHunt
 [2019-10-19]
 - Added the capability to have components for the mod Arc Reactors be made
+[2021-08-07]
+- Updated AmmoMagazine list
 
 Unoffical maintained version of TIM.
 
@@ -62,8 +64,14 @@ that any changes will be reverted when you update the script from the workshop.
 const string DEFAULT_ITEMS = @"
 AmmoMagazine/
 /Missile200mm
-/NATO_25x184mm,,,,NATO_25x184mmMagazine
-/NATO_5p56x45mm,,,,NATO_5p56x45mmMagazine
+/NATO_25x184mm,,,,NATO_25x184mmMagazine  
+/AutomaticRifleGun_Mag_20rd,,,,
+/ElitePistolMagazine,,,,
+/FullAutoPistolMagazine,,,,
+/PreciseAutomaticRifleGun_Mag_5rd,,,,
+/RapidFireAutomaticRifleGun_Mag_50rd,,,,
+/SemiAutoPistolMagazine,,,,
+/UltimateAutomaticRifleGun_Mag_30rd,,,,
 
 Component/
 /BulletproofGlass,50,2%
