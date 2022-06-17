@@ -65,22 +65,30 @@ that any changes will be reverted when you update the script from the workshop.
 // the game, some from the community workshop).
 const string DEFAULT_ITEMS = @"
 AmmoMagazine/
+/AutocannonClip
+/AutomaticRifleGun_Mag_20rd
+/ElitePistolMagazine
+/FullAutoPistolMagazine
+/LargeCalibreAmmo
+/LargeRailgunAmmo
+/MediumCalibreAmmo
 /Missile200mm
-/NATO_25x184mm,,,,NATO_25x184mmMagazine  
-/AutomaticRifleGun_Mag_20rd,,,,
-/ElitePistolMagazine,,,,
-/FullAutoPistolMagazine,,,,
-/PreciseAutomaticRifleGun_Mag_5rd,,,,
-/RapidFireAutomaticRifleGun_Mag_50rd,,,,
-/SemiAutoPistolMagazine,,,,
-/UltimateAutomaticRifleGun_Mag_30rd,,,,
+/NATO_25x184mm
+/NATO_5p56x45mm
+/PreciseAutomaticRifleGun_Mag_5rd
+/RapidFireAutomaticRifleGun_Mag_50rd
+/SemiAutoPistolMagazine
+/SmallRailgunAmmo
+/UltimateAutomaticRifleGun_Mag_30rd
 
 Component/
 /BulletproofGlass,50,2%
+/Canvas,5,0.01%
 /Computer,30,5%,,ComputerComponent
 /Construction,150,20%,,ConstructionComponent
 /Detector,10,0.1%,,DetectorComponent
 /Display,10,0.5%
+/EngineerPlushie
 /Explosives,5,0.1%,,ExplosivesComponent
 /Girder,10,0.5%,,GirderComponent
 /GravityGenerator,1,0.1%,GravityGen,GravityGeneratorComponent
@@ -97,13 +105,10 @@ Component/
 /SteelPlate,150,40%
 /Superconductor,10,1%
 /Thrust,15,5%,,ThrustComponent
-/Canvas,5,0.01%
-/ArcFuel,0,0%
-/DenseSteelPlate,0,0%
-/ArcReactorcomponent,0,0%
+/ZoneChip
 
 GasContainerObject/
-/HydrogenBottle
+/HydrogenBottle,1
 
 Ingot/
 /Cobalt,50,3.5%
@@ -112,45 +117,51 @@ Ingot/
 /Magnesium,5,0.1%
 /Nickel,30,1.5%
 /Platinum,5,0.1%
+/Scrap
 /Silicon,50,2%
 /Silver,20,1%
 /Stone,50,2.5%
 /Uranium,1,0.1%
 
 Ore/
-/Cobalt
-/Gold
+/Cobalt,50,3.5%
+/Gold,5,0.2%
 /Ice
-/Iron
-/Magnesium
-/Nickel
-/Platinum
+/Iron,200,88%
+/Magnesium,5,0.1%
+/Nickel,30,1.5%
+/Platinum,5,0.1%
 /Scrap
-/Silicon
-/Silver
-/Stone
-/Uranium
+/Silicon,50,2%
+/Silver,20,1%
+/Stone,50,2.5%
+/Uranium,1,0.1%
 
 OxygenContainerObject/
-/OxygenBottle
+/OxygenBottle,1
 
 PhysicalGunObject/
-/AngleGrinderItem,,,,AngleGrinder
-/AngleGrinder2Item,,,,AngleGrinder2
-/AngleGrinder3Item,,,,AngleGrinder3
-/AngleGrinder4Item,,,,AngleGrinder4
-/AutomaticRifleItem,,,AutomaticRifle,AutomaticRifle
-/HandDrillItem,,,,HandDrill
-/HandDrill2Item,,,,HandDrill2
-/HandDrill3Item,,,,HandDrill3
-/HandDrill4Item,,,,HandDrill4
-/PreciseAutomaticRifleItem,,,PreciseAutomaticRifle,PreciseAutomaticRifle
-/RapidFireAutomaticRifleItem,,,RapidFireAutomaticRifle,RapidFireAutomaticRifle
-/UltimateAutomaticRifleItem,,,UltimateAutomaticRifle,UltimateAutomaticRifle
-/WelderItem,,,,Welder
-/Welder2Item,,,,Welder2
-/Welder3Item,,,,Welder3
-/Welder4Item,,,,Welder4
+/AdvancedHandHeldLauncherItem
+/AngleGrinder2Item
+/AngleGrinder3Item
+/AngleGrinder4Item
+/AngleGrinderItem
+/AutomaticRifleItem
+/BasicHandHeldLauncherItem
+/ElitePistolItem
+/FullAutoPistolItem
+/HandDrill2Item
+/HandDrill3Item
+/HandDrill4Item
+/HandDrillItem
+/PreciseAutomaticRifleItem
+/RapidFireAutomaticRifleItem
+/SemiAutoPistolItem
+/UltimateAutomaticRifleItem
+/Welder2Item
+/Welder3Item
+/Welder4Item
+/WelderItem
 ";
 
 // Item types which may have quantities which are not whole numbers.
